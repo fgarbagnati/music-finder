@@ -1,0 +1,16 @@
+.search_bar {
+  width: 50%;
+  margin: 0px auto;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+.tint {
+  position: relative;
+  cursor: pointer;
+  box-shadow: rgba(0,0,0,.2) 3px 5px 5px;
+  background: rgba(0,255,255, 0.5);
+}
