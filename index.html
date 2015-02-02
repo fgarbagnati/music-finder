@@ -7,16 +7,70 @@
     <link rel='stylesheet' href='css/style.css'>
   </head>
   <body>
-    <div class='container text-center'>
-      <h1 class="text-center">Music Finder!</h1>
-      <br/>
-      <input type="text" placeholder="Search for an Artist!">
-      <button class='btn btn-primary text-center'>Search!</button>
+    <!-- results template -->
+    <script type="text/x-handlebars" data-template-name='index'>
+      <div class="col-md-4">
+        <h3>John Lennon</h3>
+        <img src='dev-imgs/JohnLennon.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>Paul McCartney</h3>
+        <img src='dev-imgs/PaulMcCartney.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>Queen</h3>
+        <img src='dev-imgs/Queen.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>The Animals</h3>
+        <img src='dev-imgs/TheAnimals.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>The Beach Boys</h3>
+        <img src='dev-imgs/TheBeachBoys.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>The Kinks</h3>
+        <img src='dev-imgs/TheKinks.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>The Monkees</h3>
+        <img src='dev-imgs/TheMonkees.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>The Rolling Stones</h3>
+        <img src='dev-imgs/TheRollingStones.jpg' class='img-rounded tint'/>
+      </div>
+      <div class="col-md-4">
+        <h3>The Who</h3>
+        <img src='dev-imgs/TheWho.jpg' class='img-rounded tint'/>
+      </div>
+    </script>
 
-    </div>
-    <script src='js/libs/jquery-1.11.1.min.js'></script>
-    <script src='js/libs/handlebars-v1.3.0.js'></script>
-    <script src='js/libs/ember.js'></script>
-    <script src='js/libs/ember-data.js'></script>
+    <script type="text/x-handlebars" data-template-name="something">
+      <h1>this is working </h1>
+    </script>
+
+    <script type="text/x-handlebars" data-template-name="application">
+      <div class='container text-center'>
+        <h1 class="text-center">Music Finder!</h1>
+        <br/>
+        <div class="form-group">
+          <input type="text" class="form-control search_bar" placeholder="Search for an Artist!">
+          <br/>
+          <button class='btn btn-primary text-center '>Search!</button>
+        </div>
+        <hr>
+        <br/>
+        {{outlet}}
+      </div>
+    </script>
+    <script src="js/libs/jquery-1.11.1.min.js"></script>
+    <script src="js/libs/handlebars-v1.3.0.js"></script>
+    <script src="js/libs/ember.js"></script>
+    <script src="js/libs/ember-data.js"></script>
+    <script src="js/application.js"></script>
+    <script src="js/router.js"></script>
+    <script src="js/models/result.js"></script>
   </body>
 </html>
