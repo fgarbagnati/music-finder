@@ -56,7 +56,12 @@
         <h1 class="text-center">Music Finder!</h1>
         <br/>
         <div class="form-group">
-          <input type="text" class="form-control search_bar" placeholder="Search for an Artist!">
+          {{input
+            type="text"
+            id="search-query"
+            placeholder="Search for an artist!"
+            action="searchArtists"
+            class="form-control search_bar"}}
           <br/>
           {{#link-to 'search' class='btn btn-primary'}}Search{{/link-to}}
         </div>
