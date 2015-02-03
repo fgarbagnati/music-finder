@@ -60,10 +60,10 @@
             type="text"
             id="search-query"
             placeholder="Search for an artist!"
-            action="searchArtists"
+            action="search"
             class="form-control search_bar"}}
           <br/>
-          {{#link-to 'search' class='btn btn-primary'}}Search{{/link-to}}
+          <button class="btn btn-primary" {{action "search"}}>Search</button>
         </div>
         <hr>
         <br/>
