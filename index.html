@@ -47,23 +47,23 @@
       </div>
     </script>
 
+    <!-- index template -->
     <script type="text/x-handlebars" data-template-name="index">
       <h1>this is working </h1>
     </script>
 
+    <!-- application template -->
     <script type="text/x-handlebars" data-template-name="application">
       <div class='container text-center'>
         <h1 class="text-center">Music Finder!</h1>
-        <br/>
         <div class="form-group">
           {{input
-            type="text"
-            id="search-query"
-            placeholder="Search for an artist!"
-            action="search"
-            class="form-control search_bar"}}
+            valueBinding='query'
+            class='form-control search_bar'
+            action='search'
+            placeholder='Search for an artist!'}}
           <br/>
-          <button class="btn btn-primary" {{action "search"}}>Search</button>
+          <button {{action 'something'}} class='btn btn-primary'>Search</button>
         </div>
         <hr>
         <br/>
@@ -77,5 +77,6 @@
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/result.js"></script>
+    <script src="js/controllers/search_controller.js"></script>
   </body>
 </html>
