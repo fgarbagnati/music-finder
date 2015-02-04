@@ -1,9 +1,10 @@
-App.Result = DS.Model.extend({
+MusicFinder.App.Result = DS.Model.extend({
   artistName: DS.attr('string'),
+  artistID: DS.attr('string'),
   artistImage: DS.attr('string')
 });
 
-App.Result.FIXTURES = [
+MusicFinder.App.Result.FIXTURES = [
   { id: 1,
     artistName: 'Queen',
     artistImage: 'dev-imgs/Queen.jpg'

@@ -63,7 +63,8 @@
             action='search'
             placeholder='Search for an artist!'}}
           <br/>
-          <button {{action 'something'}} class='btn btn-primary'>Search</button>
+          <button {{action 'search'}} class='btn btn-primary'>Search</button>
+          <div id="blog-page"></div>
         </div>
         <hr>
         <br/>
@@ -72,11 +73,16 @@
     </script>
     <script src="js/libs/jquery-1.11.1.min.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
+    <script src="js/libs/underscore-1.7.0.js"></script>
+
     <script src="js/libs/ember.js"></script>
     <script src="js/libs/ember-data.js"></script>
+    <script src="js/libs/jquery.echonest.js"></script>
     <script src="js/application.js"></script>
     <script src="js/router.js"></script>
     <script src="js/models/result.js"></script>
-    <script src="js/controllers/search_controller.js"></script>
+    <script src="js/controllers/echonest_controller.js"></script>
+    <script src="js/controllers/application_controller.js"></script>
+
   </body>
 </html>
