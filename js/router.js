@@ -1,5 +1,5 @@
 MusicFinder.App.Router.map( function(){
-  this.route('search')
+  this.route('search');
 });
 
 MusicFinder.App.SearchRoute = Ember.Route.extend({

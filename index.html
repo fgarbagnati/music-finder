@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html>
   <head>
     <meta charset='utf-8'>
@@ -7,70 +8,37 @@
     <link rel='stylesheet' href='css/style.css'>
   </head>
   <body>
-    <!-- results template -->
-    <script type="text/x-handlebars" data-template-name='something'>
-      <div class="col-md-4">
-        <h3>John Lennon</h3>
-        <img src='dev-imgs/JohnLennon.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>Paul McCartney</h3>
-        <img src='dev-imgs/PaulMcCartney.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>Queen</h3>
-        <img src='dev-imgs/Queen.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>The Animals</h3>
-        <img src='dev-imgs/TheAnimals.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>The Beach Boys</h3>
-        <img src='dev-imgs/TheBeachBoys.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>The Kinks</h3>
-        <img src='dev-imgs/TheKinks.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>The Monkees</h3>
-        <img src='dev-imgs/TheMonkees.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>The Rolling Stones</h3>
-        <img src='dev-imgs/TheRollingStones.jpg' class='img-rounded tint'/>
-      </div>
-      <div class="col-md-4">
-        <h3>The Who</h3>
-        <img src='dev-imgs/TheWho.jpg' class='img-rounded tint'/>
+    <!-- search template -->
+    <script type='text/x-handlebars' data-template-name='search'>
+      <div class="form-group">
+        {{input
+          valueBinding='query'
+          class='form-control search_bar'
+          action='search'
+          placeholder='Search for an artist!'}}
+        <br/>
+        <button {{action 'search'}} class='btn btn-primary'>Search</button>
       </div>
     </script>
 
     <!-- index template -->
     <script type="text/x-handlebars" data-template-name="index">
-      <h1>this is working </h1>
+      <h3>Enter an artist and get a list of similar artists to explore!</h3>
+      <br/>
+      {{#link-to 'search' class='btn btn-primary'}}Get Started!{{/link-to}}
     </script>
 
     <!-- application template -->
     <script type="text/x-handlebars" data-template-name="application">
       <div class='container text-center'>
         <h1 class="text-center">Music Finder!</h1>
-        <div class="form-group">
-          {{input
-            valueBinding='query'
-            class='form-control search_bar'
-            action='search'
-            placeholder='Search for an artist!'}}
-          <br/>
-          <button {{action 'search'}} class='btn btn-primary'>Search</button>
-          <div id="blog-page"></div>
-        </div>
         <hr>
         <br/>
         {{outlet}}
       </div>
     </script>
+
+
     <script src="js/libs/jquery-1.11.1.min.js"></script>
     <script src="js/libs/handlebars-v1.3.0.js"></script>
     <script src="js/libs/underscore-1.7.0.js"></script>
@@ -83,6 +51,7 @@
     <script src="js/models/result.js"></script>
     <script src="js/controllers/echonest_controller.js"></script>
     <script src="js/controllers/application_controller.js"></script>
+    <script src="js/controllers/search_controller.js"></script>
 
   </body>
 </html>
